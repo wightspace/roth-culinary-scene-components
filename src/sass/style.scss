@@ -1,10 +1,106 @@
 @import "../../node_modules/bootstrap/scss/functions";
 
+@mixin button-variant(
+  $background,
+  $border,
+  $color: color-contrast($background),
+  $hover-background:
+    if(
+      $color == $color-contrast-light,
+      shade-color($background, $btn-hover-bg-shade-amount),
+      tint-color($background, $btn-hover-bg-tint-amount)
+    ),
+  $hover-border:
+    if(
+      $color == $color-contrast-light,
+      shade-color($border, $btn-hover-border-shade-amount),
+      tint-color($border, $btn-hover-border-tint-amount)
+    ),
+  $hover-color: color-contrast($hover-background),
+  $active-background:
+    if(
+      $color == $color-contrast-light,
+      shade-color($background, $btn-active-bg-shade-amount),
+      tint-color($background, $btn-active-bg-tint-amount)
+    ),
+  $active-border:
+    if(
+      $color == $color-contrast-light,
+      shade-color($border, $btn-active-border-shade-amount),
+      tint-color($border, $btn-active-border-tint-amount)
+    ),
+  $active-color: color-contrast($active-background),
+  $disabled-background: $background,
+  $disabled-border: $border,
+  $disabled-color: color-contrast($disabled-background)
+) {
+  color: $color;
+  @include gradient-bg($background);
+  border-color: $border;
+  @include box-shadow($btn-box-shadow);
+
+  &:hover {
+    color: $hover-color;
+    @include gradient-bg($hover-background);
+    border-color: $hover-border;
+  }
+
+  .btn-check:focus + &,
+  &:focus {
+    color: $hover-color;
+    @include gradient-bg($hover-background);
+    border-color: $hover-border;
+    @if $enable-shadows {
+      @include box-shadow($btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), 0.5));
+    } @else {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow: 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), 0.5);
+    }
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color: $active-color;
+    background-color: $active-background;
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+    border-color: $active-border;
+
+    &:focus {
+      @if $enable-shadows {
+        @include box-shadow($btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), 0.5));
+      } @else {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        box-shadow: 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), 0.5);
+      }
+    }
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $disabled-color;
+    background-color: $disabled-background;
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+    border-color: $disabled-border;
+  }
+}
+$enable-cssgrid: true;
+
+$font-family-sans-serif: "Roboto";
+$font-family-sans-serif-header: "Roboto Condensed";
+
 $white: #fff;
 $primary: #f36b23;
 $secondary: #474747;
+$ternary: #2b2b2b;
+
 $dropdown-bg: #2b2b2b;
-$dropdown-border-color: #3eabaa;
+$dropdown-border-color: #2b2b2b;
+// $dropdown-border-color: #3eabaa;
 $dropdown-color: #fff;
 $dropdown-divider-bg: #fff;
 $dropdown-link-color: #fff;
@@ -38,16 +134,74 @@ $offcanvas-color: $white;
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-h1 {
-  font-size: 130px;
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: $font-family-sans-serif-header;
 }
 
-.dropdown-menu-center {
-  right: auto !important;
-  left: 50% !important;
-  -webkit-transform: translate(-50%, 0) !important;
-  -o-transform: translate(-50%, 0) !important;
-  transform: translate(-50%, 0) !important;
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 18px;
+}
+
+.no-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: #474747;
+}
+
+.btn-offcanvas {
+  @include button-variant(#2b2b2b, #2b2b2b);
+}
+
+.offcanvas-footer {
+  h4 {
+    color: #474747;
+    font-size: 16px;
+  }
+
+  a,
+  h4 {
+    font-family: "Roboto Condensed";
+  }
+
+  .social-nav {
+    margin-bottom: 2rem;
+    a {
+      font-size: 16px;
+    }
+  }
+
+  .term-nav {
+    margin-bottom: 0;
+
+    a {
+      font-size: 12px;
+    }
+
+    p {
+      font-size: 12px;
+      padding-top: 2rem;
+      margin: 0;
+    }
+  }
 }
 
 .main-navbar {
@@ -59,13 +213,9 @@ h1 {
       font-family: "Roboto";
       font-style: normal;
       font-weight: 700;
-      font-size: 15px;
+      font-size: 16px;
       line-height: 18px;
     }
-  }
-
-  .dropdown-menu {
-    padding: 1rem;
   }
 
   .dropdown-content {
@@ -87,36 +237,54 @@ h1 {
   }
 }
 
-.dropdown-toggle.show {
-  &::before {
-    content: "";
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 0;
-    right: 0;
-    bottom: -32px;
-    box-sizing: border-box;
-    border: 0.5em solid black;
-    border-color: transparent transparent #2b2b22 #2b2b22;
-    transform: rotate(135deg);
-    box-shadow: -2px 2px 0px 0 #3eabaa;
-    z-index: 1001;
-    margin: auto;
+@include media-breakpoint-up(lg) {
+  .dropdown-menu.show {
+    border: 2px solid #3eabaa;
+  }
+
+  .dropdown-menu.dropdown-menu-center-lg.show {
+    right: auto !important;
+    left: 50% !important;
+    transform: translate(-50%, 0) !important;
+  }
+
+  .dropdown-toggle.show {
+    &::before {
+      content: "";
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 0;
+      right: 0;
+      bottom: -32px;
+      box-sizing: border-box;
+      border: 0.5em solid black;
+      border-color: transparent transparent #2b2b22 #2b2b22;
+      transform: rotate(135deg);
+      box-shadow: -2px 2px 0px 0 #3eabaa;
+      z-index: 1001;
+      margin: auto;
+    }
+  }
+}
+.user-navbar {
+  @include media-breakpoint-down(lg) {
+    display: none;
   }
 }
 
-.util-navbar {
+.util-navbar,
+.user-navbar {
   .nav-item {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    // margin-left: 1rem;
+    // margin-right: 1rem;
     a {
       font-family: "Roboto";
       font-style: normal;
       font-weight: 700;
       font-size: 13px;
-      line-height: 15px;
+      line-height: 16px;
 
       svg {
         margin-left: 1rem;
@@ -125,21 +293,29 @@ h1 {
   }
 }
 
-.navbar-dark {
-  .navbar-nav {
-    .nav-link.active {
-      position: relative;
-      &::after {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        width: calc(100% - 18px);
-        height: 2px;
-        background-color: #fff;
-        bottom: 0;
-        left: 0;
-        margin-left: 8px;
-      }
+.navbar-nav {
+  .nav-item {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .dropdown-menu {
+    padding: 1rem;
+  }
+
+  .nav-link.active {
+    position: relative;
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: auto;
+      height: 2px;
+      background-color: #fff;
+      bottom: 0;
+      left: 0;
     }
   }
 }
@@ -148,13 +324,87 @@ h1 {
   margin-right: 2.6rem;
 }
 
-.caret-off::before {
+.caret-off::after {
   display: none;
 }
-.caret-off::after {
+
+.offcanvas-footer {
   display: none;
 }
 
 .offcanvas {
   z-index: 1065;
+
+  @include media-breakpoint-down(lg) {
+    padding: 1.5rem;
+
+    .offcanvas-footer {
+      padding: 1rem;
+      display: inline;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar-nav {
+      &::after {
+        content: "";
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+        height: 2px;
+        background-color: #999999;
+        display: flex;
+      }
+
+      .dropdown-menu {
+        padding: 0;
+        margin-top: 0;
+      }
+
+      .dropdown-divider {
+        margin: 0.5rem 0;
+        border-top: 0px;
+        height: 0;
+      }
+
+      .nav-item {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .nav-link {
+        font-size: 16px;
+        text-transform: uppercase;
+        padding-top: 0.813rem;
+        padding-bottom: 0.813rem;
+      }
+    }
+  }
+}
+
+.dropdown-toggle::after {
+  border-top-color: #f36b23;
+}
+
+.icon {
+  width: 32px;
+}
+
+footer {
+  strong,
+  p {
+    font-size: 12px;
+  }
+}
+
+.g-row-gap-0 {
+  row-gap: 0;
+}
+
+.g-gap-60 {
+  gap: 60px;
+}
+
+.bdr-r-1 {
+  border-right: #999999 solid 2px;
 }
