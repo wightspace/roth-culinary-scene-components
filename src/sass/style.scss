@@ -1,434 +1,13 @@
-@import "../../node_modules/bootstrap/scss/functions";
-
-@mixin button-variant(
-  $background,
-  $border,
-  $color: color-contrast($background),
-  $hover-background:
-    if(
-      $color == $color-contrast-light,
-      shade-color($background, $btn-hover-bg-shade-amount),
-      tint-color($background, $btn-hover-bg-tint-amount)
-    ),
-  $hover-border:
-    if(
-      $color == $color-contrast-light,
-      shade-color($border, $btn-hover-border-shade-amount),
-      tint-color($border, $btn-hover-border-tint-amount)
-    ),
-  $hover-color: color-contrast($hover-background),
-  $active-background:
-    if(
-      $color == $color-contrast-light,
-      shade-color($background, $btn-active-bg-shade-amount),
-      tint-color($background, $btn-active-bg-tint-amount)
-    ),
-  $active-border:
-    if(
-      $color == $color-contrast-light,
-      shade-color($border, $btn-active-border-shade-amount),
-      tint-color($border, $btn-active-border-tint-amount)
-    ),
-  $active-color: color-contrast($active-background),
-  $disabled-background: $background,
-  $disabled-border: $border,
-  $disabled-color: color-contrast($disabled-background)
-) {
-  color: $color;
-  @include gradient-bg($background);
-  border-color: $border;
-  @include box-shadow($btn-box-shadow);
-
-  &:hover {
-    color: $hover-color;
-    @include gradient-bg($hover-background);
-    border-color: $hover-border;
-  }
-
-  .btn-check:focus + &,
-  &:focus {
-    color: $hover-color;
-    @include gradient-bg($hover-background);
-    border-color: $hover-border;
-    @if $enable-shadows {
-      @include box-shadow($btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), 0.5));
-    } @else {
-      // Avoid using mixin so we can pass custom focus shadow properly
-      box-shadow: 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), 0.5);
-    }
-  }
-
-  .btn-check:checked + &,
-  .btn-check:active + &,
-  &:active,
-  &.active,
-  .show > &.dropdown-toggle {
-    color: $active-color;
-    background-color: $active-background;
-    // Remove CSS gradients if they're enabled
-    background-image: if($enable-gradients, none, null);
-    border-color: $active-border;
-
-    &:focus {
-      @if $enable-shadows {
-        @include box-shadow($btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), 0.5));
-      } @else {
-        // Avoid using mixin so we can pass custom focus shadow properly
-        box-shadow: 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), 0.5);
-      }
-    }
-  }
-
-  &:disabled,
-  &.disabled {
-    color: $disabled-color;
-    background-color: $disabled-background;
-    // Remove CSS gradients if they're enabled
-    background-image: if($enable-gradients, none, null);
-    border-color: $disabled-border;
-  }
-}
-$enable-cssgrid: true;
-
-$font-family-sans-serif: "Roboto";
-$font-family-sans-serif-header: "Roboto Condensed";
-
-$white: #fff;
-$primary: #f36b23;
-$secondary: #474747;
-$ternary: #2d2d2d;
-
-$dropdown-bg: #2d2d2d;
-$dropdown-border-color: #2d2d2d;
-// $dropdown-border-color: #3eabaa;
-$dropdown-color: #fff;
-$dropdown-divider-bg: #fff;
-$dropdown-link-color: #fff;
-$dropdown-link-hover-color: #fff;
-$dropdown-link-hover-bg: #474747;
-$dropdown-header-color: #fff;
-$dropdown-inner-border-radius: 2;
-$dropdown-border-radius: 2px;
-$dropdown-border-width: 2px;
-$navbar-padding-y: 1.3rem;
-$navbar-dark-brand-color: $white;
-$dark: #474747;
-$navbar-dark-hover-color: $white;
-$navbar-dark-color: $white;
-$dropdown-min-width: 14.375rem;
-$dropdown-link-active-bg: #474747;
-$dropdown-divider-margin-y: 1.5rem;
-$dropdown-spacer: 1.3rem;
-$grid-gutter-width: 1.5rem;
-
-$spacer: 1.25rem;
-$gutters: (
-  0: 0,
-  1: $spacer * 0.25,
-  2: $spacer * 0.5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-  6: $spacer * 5,
-);
-
-$offcanvas-bg-color: #2d2d2d;
-$offcanvas-color: $white;
-
-$font-size-base: 1rem;
-
-$h1-font-size: $font-size-base * 5.625;
-$h2-font-size: $font-size-base * 4.375;
-$h3-font-size: $font-size-base * 3.125;
-$h4-font-size: $font-size-base * 2.5;
-$h5-font-size: $font-size-base * 1.875;
-$h6-font-size: $font-size-base * 1.625;
-
-$font-sizes: (
-  1: h1-font-size,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size,
-);
-
-$title-font-sizes: (
-  1: 1.625rem,
-  2: 1.25rem,
-  3: 0.813rem,
-);
-
-$paragraph-font-sizes: (
-  1: 1.125rem,
-  2: 0.875rem,
-  3: 0.75rem,
-);
-//
-
+@import "../sass/variables";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
-
-@each $level, $size in $font-sizes {
-  h#{$level},
-  .h#{$level} {
-    font-family: $font-family-sans-serif;
-    font-weight: 100;
-  }
-}
-
-.condensed {
-  font-family: $font-family-sans-serif-header;
-}
-
-a {
-  text-decoration: none;
-}
-
-@each $level, $size in $title-font-sizes {
-  .t#{$level} {
-    font-size: $size;
-    font-weight: 600;
-  }
-}
-
-@each $level, $size in $paragraph-font-sizes {
-  .p#{$level}-600 {
-    font-size: $size;
-    font-weight: 600;
-  }
-  .p#{$level} {
-    font-size: $size;
-    font-weight: 100;
-  }
-}
-
-p {
-  font-size: 18px;
-}
+@import "../sass/typography";
+@import "../sass/components/header";
+@import "../sass/components/footer";
 
 .no-list {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.navbar-dark .navbar-toggler {
-  border-color: #474747;
-}
-
-.btn-offcanvas {
-  @include button-variant(#2d2d2d, #2d2d2d);
-}
-
-.offcanvas-footer {
-  h4 {
-    color: #474747;
-    font-size: 16px;
-  }
-
-  a,
-  h4 {
-    font-family: "Roboto Condensed";
-  }
-
-  .social-nav {
-    margin-bottom: 2rem;
-    a {
-      font-size: 16px;
-    }
-  }
-
-  .term-nav {
-    margin-bottom: 0;
-
-    a {
-      font-size: 12px;
-    }
-
-    p {
-      font-size: 12px;
-      padding-top: 2rem;
-      margin: 0;
-    }
-  }
-}
-
-.main-navbar {
-  .nav-item {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-
-    a {
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 18px;
-    }
-  }
-
-  .dropdown-content {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    a {
-      padding-left: 1.6rem;
-      padding-right: 0.5rem;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 11px;
-      line-height: 13px;
-    }
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  .dropdown-menu.show {
-    border: 2px solid #3eabaa;
-  }
-
-  .dropdown-menu.dropdown-menu-center-lg.show {
-    right: auto !important;
-    left: 50% !important;
-    transform: translate(-50%, 0) !important;
-  }
-
-  .dropdown-toggle.show {
-    &::before {
-      content: "";
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 0;
-      left: 0;
-      right: 0;
-      bottom: -32px;
-      box-sizing: border-box;
-      border: 0.5em solid black;
-      border-color: transparent transparent #2d2d2d #2d2d2d;
-      transform: rotate(135deg);
-      box-shadow: -2px 2px 0px 0 #3eabaa;
-      z-index: 1001;
-      margin: auto;
-    }
-  }
-}
-.user-navbar {
-  @include media-breakpoint-down(lg) {
-    display: none;
-  }
-}
-
-.util-navbar,
-.user-navbar {
-  .nav-item {
-    // margin-left: 1rem;
-    // margin-right: 1rem;
-    a {
-      font-family: "Roboto";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 13px;
-      line-height: 16px;
-
-      svg {
-        margin-left: 1rem;
-      }
-    }
-  }
-}
-
-.navbar-nav {
-  .nav-item {
-    @include media-breakpoint-up(lg) {
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  .dropdown-menu {
-    padding: 1rem;
-  }
-
-  .nav-link.active {
-    position: relative;
-    &::after {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      width: auto;
-      height: 2px;
-      background-color: #fff;
-      bottom: 0;
-      left: 0;
-    }
-  }
-}
-
-.navbar-brand {
-  margin-right: 2.6rem;
-}
-
-.caret-off::after {
-  display: none;
-}
-
-.offcanvas-footer {
-  display: none;
-}
-
-.offcanvas {
-  z-index: 1065;
-
-  @include media-breakpoint-down(lg) {
-    padding: 1.5rem;
-
-    .offcanvas-footer {
-      padding: 1rem;
-      display: inline;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .navbar-nav {
-      &::after {
-        content: "";
-        margin-top: 2.5rem;
-        margin-bottom: 2.5rem;
-        height: 2px;
-        background-color: #999999;
-        display: flex;
-      }
-
-      .dropdown-menu {
-        padding: 0;
-        margin-top: 0;
-      }
-
-      .dropdown-divider {
-        margin: 0.5rem 0;
-        border-top: 0px;
-        height: 0;
-      }
-
-      .nav-item {
-        margin-left: 0;
-        margin-right: 0;
-      }
-
-      .nav-link {
-        font-size: 16px;
-        text-transform: uppercase;
-        padding-top: 0.813rem;
-        padding-bottom: 0.813rem;
-      }
-    }
-  }
 }
 
 .dropdown-toggle::after {
@@ -437,25 +16,6 @@ p {
 
 .icon {
   width: 32px;
-}
-
-footer {
-  strong,
-  p {
-    font-size: 12px;
-  }
-
-  .main {
-    @include media-breakpoint-up(lg) {
-      .left {
-        border-right: 1px solid #999999;
-      }
-    }
-  }
-
-  .util {
-    background-color: #2d2d2d;
-  }
 }
 
 .g-row-gap-0 {
@@ -468,4 +28,57 @@ footer {
 
 .bdr-r-1 {
   border-right: #999999 solid 2px;
+}
+
+.featured-header {
+  min-height: 500px;
+  h1 {
+    color: white;
+  }
+}
+
+.bg-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.recipe-filter {
+  ul {
+    margin: 1rem 0 1rem 0;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 1rem;
+  }
+}
+
+.bg-grey {
+  background-color: #dedede;
+}
+
+.btn-featured-dark-round {
+  @include button-variant(#2b2b2b, $primary, $white, $primary);
+  border-radius: 50rem;
+  min-width: 9rem;
+}
+
+.featured-recipe {
+  .details {
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    background-color: #2b2b2b;
+    color: white;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }

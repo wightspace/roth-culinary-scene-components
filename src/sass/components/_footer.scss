@@ -1,0 +1,22 @@
+footer,
+.footer {
+  background-color: #474747;
+  color: white;
+
+  strong,
+  p {
+    font-size: 12px;
+  }
+
+  .main {
+    @include media-breakpoint-up(lg) {
+      .left {
+        border-right: 1px solid #999999;
+      }
+    }
+  }
+
+  .util {
+    background-color: #2d2d2d;
+  }
+}
