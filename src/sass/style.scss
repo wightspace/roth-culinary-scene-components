@@ -185,7 +185,7 @@ a {
 }
 
 @each $level, $size in $title-font-sizes {
-  .title-#{$level} {
+  .t#{$level} {
     font-size: $size;
     font-weight: 600;
   }
