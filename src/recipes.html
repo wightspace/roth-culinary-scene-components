@@ -24,86 +24,119 @@
         </div>
       </div>
     </header>
-    <main class="container">
-      <div class="row g-0">
-        <div class="col col-12 col-md-4 bg-grey">
-          <form class="p-5" action="">
-            <h4>Find a recipe</h4>
+    <main class="container-lg">
+      <div class="row g-0 offcanvas-expand-lg">
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBackdrop"
+          aria-controls="offcanvasWithBackdrop"
+        >
+          Enable backdrop (default)
+        </button>
 
-            <fieldset>
-              <label class="p3" for="appliance">By Appliance</label>
-              <select class="form-select mb-4" aria-label="Default select example">
-                <option selected>Select Appliance</option>
-              </select>
-              <label for="exampleFormControlInput1" class="form-label p3 rounded-pill">Ingredient, Title, etc. </label>
-              <select class="form-select mb-4" aria-label="Default select example">
-                <option selected>All Events</option>
-              </select>
-              <button class="d-flex btn btn-primary t3 text-uppercase rounded-pill align-items-center">
-                Find Recipe
-                <span class="ms-5">
-                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12.3515" cy="11.8662" r="10.7686" fill="white" stroke="#F36B23" stroke-width="2" />
-                    <path
-                      d="M8.91125 8.24609L15.7917 15.1266M15.7917 15.1266H8.91125M15.7917 15.1266C15.7917 15.1266 15.7917 10.9331 15.7917 8.24609"
-                      stroke="#3D3D3D"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </fieldset>
-            <hr class="my-5" />
-            <h4>Recipe filter</h4>
-            <fieldset class="recipe-filter">
-              <ul>
-                <li class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                  <label class="form-check-label p2" for="flexCheckChecked">Breakfast</label>
-                </li>
-                <li class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                  <label class="form-check-label p2" for="flexCheckChecked">Appetizers</label>
-                </li>
-                <li class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                  <label class="form-check-label p2" for="flexCheckChecked">Main Dish</label>
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xxl-3 bg-grey">
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasWithBackdrop"
+            aria-labelledby="offcanvasWithBackdropLabel"
+          >
+            <div class="offcanvas-header">
+              <h1 class="t2 text-uppercase mb-0">Filter By</h1>
+              <hr />
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
 
+            <div class="offcanvas-body">
+              <form class="p-0 p-lg-5" action="">
+                <h4>Find a recipe</h4>
+                <fieldset>
+                  <label class="form-label p3" for="appliance">By Appliance</label>
+                  <select class="form-select mb-4" aria-label="Default select example">
+                    <option selected>Select Appliance</option>
+                  </select>
+                  <label for="exampleFormControlInput1" class="form-label p3 rounded-pill"
+                    >Ingredient, Title, etc.
+                  </label>
+                  <select class="form-select mb-4" aria-label="Default select example">
+                    <option selected>All Events</option>
+                  </select>
+                  <button
+                    class="t3 w-100 w-md-100 d-flex btn btn-primary text-uppercase rounded-pill align-items-center justify-content-between"
+                  >
+                    Find Recipe
+                    <span class="ms-2">
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12.3515" cy="11.8662" r="10.7686" fill="white" stroke="#F36B23" stroke-width="2" />
+                        <path
+                          d="M8.91125 8.24609L15.7917 15.1266M15.7917 15.1266H8.91125M15.7917 15.1266C15.7917 15.1266 15.7917 10.9331 15.7917 8.24609"
+                          stroke="#3D3D3D"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </fieldset>
+                <hr class="my-5" />
+                <h4>Recipe filter</h4>
+                <fieldset class="recipe-filter">
                   <ul>
                     <li class="form-check">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                      <label class="form-check-label p2" for="flexCheckChecked">Protein</label>
+                      <label class="form-check-label p2" for="flexCheckChecked">Breakfast</label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                      <label class="form-check-label p2" for="flexCheckChecked">Appetizers</label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                      <label class="form-check-label p2" for="flexCheckChecked">Main Dish</label>
 
                       <ul>
                         <li class="form-check">
                           <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                          <label class="form-check-label p2" for="flexCheckChecked">Lamb</label>
+                          <label class="form-check-label p2" for="flexCheckChecked">Protein</label>
+
+                          <ul>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                              <label class="form-check-label p2" for="flexCheckChecked">Lamb</label>
+                            </li>
+                            <li class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                              <label class="form-check-label p2" for="flexCheckChecked">Pork</label>
+                            </li>
+                          </ul>
                         </li>
                         <li class="form-check">
                           <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                          <label class="form-check-label p2" for="flexCheckChecked">Pork</label>
+                          <label class="form-check-label p2" for="flexCheckChecked">Grains / Starches</label>
                         </li>
                       </ul>
                     </li>
                     <li class="form-check">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                      <label class="form-check-label p2" for="flexCheckChecked">Grains / Starches</label>
+                      <label class="form-check-label p2" for="flexCheckChecked">Breads / Baked Goods</label>
+                    </li>
+                    <li class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                      <label class="form-check-label p2" for="flexCheckChecked">Sauce</label>
                     </li>
                   </ul>
-                </li>
-                <li class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                  <label class="form-check-label p2" for="flexCheckChecked">Breads / Baked Goods</label>
-                </li>
-                <li class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                  <label class="form-check-label p2" for="flexCheckChecked">Sauce</label>
-                </li>
-              </ul>
-            </fieldset>
-          </form>
+                </fieldset>
+              </form>
+            </div>
+          </div>
         </div>
-        <div class="col col-12 col-md-8">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-8 col-xxl-9">
           <section class="featured-recipe row g-0">
             <div class="image col col-12 col-md-6">
               <img class="img-fluid" src="https://source.unsplash.com/random/500x500/?recipes" />
@@ -323,6 +356,10 @@
     </main>
     <footer></footer>
 
-    <script src="js/scripts.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

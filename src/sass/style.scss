@@ -82,3 +82,31 @@
     object-fit: cover;
   }
 }
+@include media-breakpoint-up(lg) {
+  .offcanvas-expand-lg {
+    .offcanvas {
+      position: inherit;
+      bottom: 0;
+      z-index: 1000;
+      flex-grow: 1;
+      visibility: visible !important;
+      background-color: transparent;
+      border-right: 0;
+      border-left: 0;
+      transition: none;
+      transform: none;
+    }
+
+    .offcanvas-header {
+      display: none;
+    }
+
+    .offcanvas-body {
+      display: flex;
+      flex-grow: 0;
+      padding: 0;
+      overflow-y: visible;
+      height: 100%;
+    }
+  }
+}

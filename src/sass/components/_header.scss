@@ -159,9 +159,11 @@
 
 .offcanvas {
   z-index: 1065;
+  color: #2d2d2d;
 
   @include media-breakpoint-down(lg) {
     padding: 1.5rem;
+    color: #fff;
 
     .offcanvas-footer {
       padding: 1rem;
