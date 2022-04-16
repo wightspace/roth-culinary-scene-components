@@ -79,6 +79,14 @@ $paragraph-font-sizes: (
   3: 0.75rem,
 );
 
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1440px,
+);
+
 $form-check-input-width: 1.75em;
 $form-check-min-height: 1.75em;
 $form-check-input-bg: $white;
