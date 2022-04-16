@@ -24,16 +24,26 @@
         </div>
       </div>
     </header>
-    <main class="container-lg">
+    <main class="container-lg g-0">
       <div class="row g-0 offcanvas-expand-lg">
         <button
-          class="btn btn-primary"
+          class="offcanvas-open-btn t2 d-flex justify-content-between btn btn-turquoise text-uppercase"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasWithBackdrop"
           aria-controls="offcanvasWithBackdrop"
         >
-          Enable backdrop (default)
+          <span>Filter & Sort</span>
+          <span>
+            <svg height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0.62207" y1="3.44531" x2="19.7202" y2="3.44531" stroke="#2B2B2B" />
+              <line x1="0.62207" y1="16.5312" x2="19.7202" y2="16.5312" stroke="#2B2B2B" />
+              <line x1="19.7202" y1="10.0859" x2="0.62207" y2="10.0859" stroke="#2B2B2B" />
+              <circle cx="15.6178" cy="16.5523" r="2.41561" fill="#2B2B2B" />
+              <circle cx="5.57332" cy="9.97811" r="2.41561" fill="#2B2B2B" />
+              <circle cx="15.6178" cy="3.39998" r="2.41561" fill="#2B2B2B" />
+            </svg>
+          </span>
         </button>
 
         <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xxl-3 bg-grey">
@@ -136,7 +146,7 @@
             </div>
           </div>
         </div>
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-8 col-xxl-9">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-8 col-xxl-9 overflow-hidden-x">
           <section class="featured-recipe row g-0">
             <div class="image col col-12 col-md-6">
               <img class="img-fluid" src="https://source.unsplash.com/random/500x500/?recipes" />
@@ -153,7 +163,7 @@
             </div>
           </section>
           <section class="recipes row">
-            <div class="col px-2 px-md-4 px-lg-4">
+            <div class="col px-4 px-md-4 px-lg-4">
               <nav class="row my-4"></nav>
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
                 <article class="col mb-2">
