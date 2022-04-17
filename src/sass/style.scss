@@ -54,7 +54,18 @@
 }
 
 .bg-grey {
+  position: relative;
   background-color: #dedede;
+
+  &.bg-grey-left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: #dedede;
+  }
 }
 
 .bg-turquoise {

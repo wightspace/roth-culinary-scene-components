@@ -28,10 +28,22 @@ a {
   }
   .p#{$level} {
     font-size: $size;
-    font-weight: 100;
   }
 }
 
 p {
   font-size: 18px;
+}
+
+.thin {
+  font-weight: 100;
+}
+.light {
+  font-weight: 300;
+}
+.regular {
+  font-weight: 400;
+}
+.bold {
+  font-weight: 700;
 }

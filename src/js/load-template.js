@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    console.log('src');
     $("load").each(function (index) {
+        console.log('src');
         let src = $(this).attr('src');
         $(this).load(src);
     });
