@@ -60,16 +60,31 @@ body {
 .featured-video {
   background-color: #2b2b2b;
   color: white;
+
   &__header {
     display: flex;
     justify-content: space-between;
   }
+
   &__footer {
     display: flex;
     justify-content: end;
     a {
       color: white;
     }
+  }
+}
+
+.prep-measurement {
+  &__header,
+  &__body,
+  &__footer {
+    text-align: center;
+  }
+
+  &__body,
+  &__footer {
+    color: #f36b23;
   }
 }
 
