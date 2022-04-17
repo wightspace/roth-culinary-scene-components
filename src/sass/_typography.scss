@@ -22,10 +22,6 @@ a {
 }
 
 @each $level, $size in $paragraph-font-sizes {
-  .p#{$level}-600 {
-    font-size: $size;
-    font-weight: 600;
-  }
   .p#{$level} {
     font-size: $size;
   }
