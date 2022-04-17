@@ -71,7 +71,7 @@
   min-width: 9rem;
 }
 
-.featured-recipe {
+.featured-recipe-cta {
   .details {
     padding: 4rem;
     display: flex;
@@ -91,17 +91,34 @@
   }
 }
 
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .overflow-hidden-x {
   overflow-x: hidden;
 }
 
 .offcanvas-expand-lg {
+  hr {
+    background-color: transparent;
+  }
+
   .offcanvas-open-btn {
     display: flex;
+    position: sticky;
+    top: 0;
   }
+
   @include media-breakpoint-up(lg) {
     .offcanvas-open-btn {
       display: none !important;
+    }
+
+    hr {
+      background-color: $dark;
     }
 
     .offcanvas {
