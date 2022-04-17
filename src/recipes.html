@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Recipes</title>
   </head>
+
   <body>
     <header
       class="featured-header bg-cover"
@@ -53,9 +54,8 @@
             id="offcanvasWithBackdrop"
             aria-labelledby="offcanvasWithBackdropLabel"
           >
-            <div class="offcanvas-header">
+            <div class="offcanvas-header p-2 p-lg-3">
               <h1 class="t2 text-uppercase mb-0">Filter By</h1>
-              <hr />
               <button
                 type="button"
                 class="btn-close btn-close-white"
@@ -64,94 +64,141 @@
               ></button>
             </div>
 
-            <div class="offcanvas-body">
-              <form class="p-0 p-lg-5" action="">
-                <h4>Find a recipe</h4>
-                <fieldset>
-                  <label class="form-label p3" for="appliance">By Appliance</label>
-                  <select class="form-select mb-4" aria-label="Default select example">
-                    <option selected>Select Appliance</option>
-                  </select>
-                  <label for="exampleFormControlInput1" class="form-label p3 rounded-pill"
-                    >Ingredient, Title, etc.
-                  </label>
-                  <select class="form-select mb-4" aria-label="Default select example">
-                    <option selected>All Events</option>
-                  </select>
-                  <button
-                    class="t3 w-100 w-md-100 d-flex btn btn-primary text-uppercase rounded-pill align-items-center justify-content-between"
-                  >
-                    Find Recipe
-                    <span class="ms-2">
-                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12.3515" cy="11.8662" r="10.7686" fill="white" stroke="#F36B23" stroke-width="2" />
-                        <path
-                          d="M8.91125 8.24609L15.7917 15.1266M15.7917 15.1266H8.91125M15.7917 15.1266C15.7917 15.1266 15.7917 10.9331 15.7917 8.24609"
-                          stroke="#3D3D3D"
-                          stroke-width="1.5"
-                        />
-                      </svg>
-                    </span>
-                  </button>
-                </fieldset>
-                <hr class="my-5" />
-                <h4>Recipe filter</h4>
-                <fieldset class="recipe-filter">
-                  <ul>
-                    <li class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                      <label class="form-check-label p2" for="flexCheckChecked">Breakfast</label>
-                    </li>
-                    <li class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                      <label class="form-check-label p2" for="flexCheckChecked">Appetizers</label>
-                    </li>
-                    <li class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                      <label class="form-check-label p2" for="flexCheckChecked">Main Dish</label>
+            <hr class="my-2" />
 
-                      <ul>
-                        <li class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                          <label class="form-check-label p2" for="flexCheckChecked">Protein</label>
+            <div class="offcanvas-body p-0">
+              <form class="p-2 p-lg-5 w-100" action="">
+                <div class="filter-header">
+                  <h4>Find a recipe</h4>
+                </div>
+                <div class="filter-body">
+                  <fieldset>
+                    <label class="form-label p3" for="appliance">By Appliance</label>
+                    <select class="form-select mb-4" aria-label="Default select example">
+                      <option selected>Select Appliance</option>
+                    </select>
+                    <label for="exampleFormControlInput1" class="form-label p3 rounded-pill"
+                      >Ingredient, Title, etc.
+                    </label>
+                    <select class="form-select mb-4" aria-label="Default select example">
+                      <option selected>All Events</option>
+                    </select>
+                    <button
+                      class="t3 w-100 w-md-100 d-flex btn btn-primary text-uppercase rounded-pill align-items-center justify-content-between"
+                    >
+                      Find Recipe
+                      <span class="ms-2">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle
+                            cx="12.3515"
+                            cy="11.8662"
+                            r="10.7686"
+                            fill="white"
+                            stroke="#F36B23"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M8.91125 8.24609L15.7917 15.1266M15.7917 15.1266H8.91125M15.7917 15.1266C15.7917 15.1266 15.7917 10.9331 15.7917 8.24609"
+                            stroke="#3D3D3D"
+                            stroke-width="1.5"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </fieldset>
+                </div>
+                <hr class="my-lg-5 my-4" />
+                <div class="filter-header">
+                  <h4>Recipe filter</h4>
+                  <a href="#" data-bs-toggle="tooltip" title="" data-bs-original-title="RESET FILTERS">
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M8.27107 0.543294C6.57035 0.77311 5.07412 1.53687 3.87598 2.78692C2.29154 4.43996 1.46364 6.7569 1.63689 9.05329C1.6636 9.40689 1.71841 9.87213 1.75877 10.0871L1.83209 10.4781L1.01372 10.7577L0.195312 11.0373L0.316832 11.1374C0.383658 11.1925 1.1923 11.8967 2.1138 12.7023C3.03531 13.5078 3.81824 14.1912 3.85364 14.2209C3.91153 14.2695 3.97516 14.0318 4.48562 11.8591C4.79777 10.5303 5.05955 9.42194 5.06727 9.39601C5.075 9.37011 4.72277 9.47323 4.28454 9.62523C3.84631 9.77719 3.47887 9.89216 3.46798 9.88073C3.45713 9.86926 3.41865 9.65227 3.38249 9.39845C3.29817 8.80651 3.32528 7.80847 3.44115 7.23812C3.70429 5.94286 4.35405 4.74333 5.24445 3.90922C6.05781 3.14719 6.87497 2.70341 7.95632 2.43653C8.38931 2.32965 8.49841 2.3194 9.19198 2.3205C9.82504 2.32151 10.0233 2.33754 10.3731 2.41615C10.835 2.51995 11.261 2.66364 11.6419 2.84411L11.8897 2.96153L12.0941 2.07445C12.2065 1.58656 12.2932 1.18281 12.2867 1.1772C12.1111 1.02511 11.0159 0.681504 10.3331 0.564255C9.89335 0.48876 8.75979 0.477246 8.27107 0.543294ZM13.9386 5.12908C13.6269 6.45795 13.3655 7.566 13.3577 7.59134C13.3498 7.61673 13.6967 7.51707 14.1285 7.36992C14.5603 7.22281 14.9261 7.1024 14.9413 7.1024C14.9565 7.1024 15.0005 7.32205 15.0391 7.59054C15.1269 8.20315 15.1019 9.16214 14.9827 9.75028C14.697 11.1597 13.9466 12.4661 12.9462 13.2961C12.1474 13.9588 11.3266 14.3666 10.3331 14.5941C9.85615 14.7034 8.6247 14.7042 8.11351 14.5957C7.70007 14.5079 6.99962 14.2688 6.72278 14.1211C6.61784 14.065 6.52455 14.0192 6.51546 14.0192C6.49264 14.0192 6.07491 15.7905 6.09376 15.8074C6.10209 15.8148 6.29813 15.898 6.52935 15.9923C7.31729 16.3135 7.99744 16.4555 8.93172 16.4938C11.0303 16.5798 13.0335 15.7703 14.5115 14.2391C15.8451 12.8575 16.6167 11.124 16.7889 9.12267C16.8423 8.50179 16.7909 7.5708 16.6667 6.90911L16.5948 6.52607L17.4116 6.24041C17.8608 6.0833 18.2132 5.94033 18.1946 5.92274C18.1483 5.87888 14.653 2.83509 14.571 2.76723C14.5115 2.71797 14.4524 2.93863 13.9386 5.12908Z"
+                        fill="#CB4E0B"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div class="filter-body">
+                  <fieldset class="recipe-filter">
+                    <ul>
+                      <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                        <label class="form-check-label p2" for="flexCheckChecked">Breakfast</label>
+                      </li>
+                      <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                        <label class="form-check-label p2" for="flexCheckChecked">Appetizers</label>
+                      </li>
+                      <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                        <label class="form-check-label p2" for="flexCheckChecked">Main Dish</label>
 
-                          <ul>
-                            <li class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                              <label class="form-check-label p2" for="flexCheckChecked">Lamb</label>
-                            </li>
-                            <li class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                              <label class="form-check-label p2" for="flexCheckChecked">Pork</label>
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                          <label class="form-check-label p2" for="flexCheckChecked">Grains / Starches</label>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                      <label class="form-check-label p2" for="flexCheckChecked">Breads / Baked Goods</label>
-                    </li>
-                    <li class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
-                      <label class="form-check-label p2" for="flexCheckChecked">Sauce</label>
-                    </li>
-                  </ul>
-                </fieldset>
+                        <ul>
+                          <li class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                            <label class="form-check-label p2" for="flexCheckChecked">Protein</label>
+
+                            <ul>
+                              <li class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckChecked"
+                                  checked
+                                />
+                                <label class="form-check-label p2" for="flexCheckChecked">Lamb</label>
+                              </li>
+                              <li class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="flexCheckChecked"
+                                  checked
+                                />
+                                <label class="form-check-label p2" for="flexCheckChecked">Pork</label>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                            <label class="form-check-label p2" for="flexCheckChecked">Grains / Starches</label>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                        <label class="form-check-label p2" for="flexCheckChecked">Breads / Baked Goods</label>
+                      </li>
+                      <li class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                        <label class="form-check-label p2" for="flexCheckChecked">Sauce</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                </div>
               </form>
             </div>
           </div>
         </div>
         <div class="col col-12 col-sm-12 col-md-12 col-lg-8 col-xxl-9 overflow-hidden-x">
-          <section class="featured-recipe row g-0">
+          <section>
+            <div class="alert alert-light mb-0" role="alert">
+              <p class="p2 p-3 mb-0 border rounded-3">
+                When you bring people together who have similar passions and excitement about food, it creates a
+                community of connoisseurs who are continually exploring all things culinary.
+              </p>
+            </div>
+          </section>
+          <section class="featured-recipe-cta row g-0">
             <div class="image col col-12 col-md-6">
               <img class="img-fluid" src="https://source.unsplash.com/random/500x500/?recipes" />
             </div>
-            <div class="details col col-12 col-md-6">
+            <div class="details col px-3 col-12 col-md-6">
               <span class="wrap">
                 <h1 class="h4 mb-4">Featured Recipe Title</h1>
                 <p class="p1 mb-4">
@@ -166,7 +213,7 @@
             <div class="col px-4 px-md-4 px-lg-4">
               <nav class="row my-4"></nav>
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-                <article class="col mb-2">
+                <article class="recipe-card col mb-2">
                   <img class="image w-100 img-fluid mb-2" src="https://source.unsplash.com/random/262x155/?recipes" />
                   <h1 class="t3 text-primary text-uppercase">Lorem ipsum copy here</h1>
                   <a href="" class="p3-600 author text-dark">Chef Mike Shannon</a>
@@ -364,12 +411,19 @@
         </div>
       </div>
     </main>
-    <footer></footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+    <script>
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
   </body>
 </html>
