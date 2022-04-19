@@ -77,6 +77,19 @@
         </div>
       </div>
     </header>
+    
+    <nav class="container-fluid">
+      <div class="row">
+        <ul class="nav nav-tabs justify-content-center bg-grey px-2 p-lg-5 pb-lg-0">
+          <li class="nav-item">
+            <a class="t2 text-uppercase nav-link active" aria-current="page" href="#">Upcoming events</a>
+          </li>
+          <li class="nav-item">
+            <a class="t2 text-uppercase nav-link" href="#">Recorded events</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <main class="container-lg p-2 p-lg-5">
       <div class="row g-0 offcanvas-expand-lg">
@@ -120,12 +133,12 @@
             <div class="offcanvas-body p-0">
               <form class="" action="">
                 <div class="filter-header">
-                  <h4>Event Calendar</h4>
+                  <h1 class="h4">Event Calendar</h4>
                 </div>
                 <div class="filter-body">
-                  <fieldset class="row">
+                  <fieldset class="row align-items-center">
                     <div class="col col-auto">
-                      <label>Filter By: </label>
+                      <label class="form-label p3">Filter By: </label>
                     </div>
 
                     <div class="col col-auto">
@@ -160,6 +173,40 @@
 
           <section class="events row">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+              <article class="event-card col col-12 mb-4">
+                <div class="row">
+                  <div class="event-card__image mb-3">
+                    <div class="event-card__date">
+                      <div class="date-badge row">
+                        <div class="col">
+                          <h6 class="date-badge__month">Sep</h6>
+                          <h4 class="date-badge__day h4 mb-0">16</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <img class="image w-100 img-fluid" src="https://source.unsplash.com/random/262x155/?recipes" />
+                  </div>
+                  <div class="event-card__header">
+                    <h4 class="p3 bold mb-1">Thursday September 16th 2022</h4>
+                    <h4 class="p3 regular">5:00pm to 7:00pm CT</h4>
+                    <h1 class="h6 text-uppercase">Virtual event : Introduction to wolf dual fuel range</h1>
+                  </div>
+                  <div class="event-card__body">
+                    <p class="p1">A showroom where creativity thrives, inspiration strikes, and relationships begin. A showroom where creativity thrives, inspiration strikes, and relationships begin.</p>
+                  </div>
+                </div>
+                <div class="event-card__footer">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-between w-100 t3 mb-0 text-uppercase text-dark btn btn-outline-primary btn-sm rounded-pill"
+                    >Sign up now
+                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.3828 6.67421L0.130783 12.7398V0.667969L9.3828 6.67421Z" fill="#CB4E0B" />
+                      <rect x="6.32472" y="0.511719" width="12.9548" height="12.9548" fill="#CB4E0B" />
+                    </svg>
+                  </a>
+                </div>
+              </article>
               <article class="event-card col col-12 mb-4">
                 <div class="row">
                   <div class="event-card__image mb-3">
