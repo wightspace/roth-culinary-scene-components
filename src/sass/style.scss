@@ -77,6 +77,50 @@ body {
   }
 }
 
+.date-badge {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: #f36b23;
+  border-top-left-radius: 20px;
+  color: #2b2b2b;
+  width: auto;
+  min-width: 7rem;
+}
+
+.featured-event {
+  background-color: #2b2b2b;
+  color: white;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(61 61 61 / 88%);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__overlay {
+    position: relative;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: end;
+    a {
+      color: white;
+    }
+  }
+}
+
 .prep-measurement {
   &__header,
   &__body,
