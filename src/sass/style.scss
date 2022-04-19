@@ -78,16 +78,45 @@ body {
 }
 
 .date-badge {
-  position: absolute;
-  bottom: 100%;
-  right: 0;
   padding: 1rem;
   text-align: center;
   background-color: #f36b23;
   border-top-left-radius: 20px;
   color: #2b2b2b;
-  width: auto;
   min-width: 7rem;
+
+  &__month {
+    margin-bottom: 0;
+  }
+  &__day {
+    margin-bottom: 0;
+  }
+}
+
+.event-card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &__image {
+    position: relative;
+  }
+
+  &__date {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 0;
+  }
+
+  .date-badge {
+    padding: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    min-width: 5rem;
+    .col {
+      margin: 0;
+    }
+  }
 }
 
 .featured-event {
@@ -95,10 +124,17 @@ body {
   color: white;
   position: relative;
 
-  .overlay {
+  .wrap-position {
     position: absolute;
     bottom: 0;
     background-color: rgb(61 61 61 / 88%);
+
+    .inner-position {
+      position: absolute;
+      bottom: 100%;
+      right: 0;
+      width: auto;
+    }
   }
 
   &__header {
@@ -110,6 +146,16 @@ body {
 
   &__overlay {
     position: relative;
+
+    .image-wrap {
+      height: 100%;
+    }
+
+    img.image {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
   }
 
   &__footer {
