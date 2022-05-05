@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Culinary-scenes - Modal</title>
+  </head>
+  <body>
+    <main class="container d-flex">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Event_RSVP_Virtual
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <div class="row">
+              <div class="col">
+                <button
+                  type="button"
+                  class="btn-close-primary btn-close btn-pos-tr"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+                <div class="row">
+                  <form class="col p-5" action="">
+                    <h4>Reserve Your Seat</h4>
+                    <strong>Text Message Updates (Optional)</strong>
+                    <p>
+                      Enter your cell phone number if you’d like to receive confirmation message, reminders and event
+                      updates.
+                    </p>
+                    <input class="form-control mb-4" type="phone" />
+                    <button
+                      class="t3 w-100 w-md-100 d-flex btn btn-primary text-uppercase rounded-pill align-items-center justify-content-between"
+                    >
+                      RESERVE YOUR SPOT
+                      <span class="ms-2">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle
+                            cx="12.3515"
+                            cy="11.8662"
+                            r="10.7686"
+                            fill="white"
+                            stroke="#F36B23"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M8.91125 8.24609L15.7917 15.1266M15.7917 15.1266H8.91125M15.7917 15.1266C15.7917 15.1266 15.7917 10.9331 15.7917 8.24609"
+                            stroke="#3D3D3D"
+                            stroke-width="1.5"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </form>
+                  <div class="event-card col col-5 p-5 px-4 bg-grey">
+                    <div class="row">
+                      <div class="event-card__image mb-3">
+                        <div class="event-card__date">
+                          <div class="date-badge row">
+                            <div class="col">
+                              <h6 class="date-badge__month">Sep</h6>
+                              <h4 class="date-badge__day h4 mb-0">16</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <img class="image w-100 img-fluid" src="https://source.unsplash.com/random/262x155/?recipes" />
+                      </div>
+                      <div class="event-card__header">
+                        <h4 class="p3 bold mb-1">Thursday September 16th 2022</h4>
+                        <h4 class="p3 regular">5:00pm to 7:00pm CT</h4>
+                        <h1 class="h6 text-uppercase">Virtual event : Introduction to wolf dual fuel range</h1>
+                      </div>
+                      <div class="event-card__body">
+                        <p class="p1">
+                          A showroom where creativity thrives, inspiration strikes, and relationships begin. A showroom
+                          where creativity thrives, inspiration strikes, and relationships begin.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+    <script>
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+        spaceBetween: 0,
+        slideToClickedSlide: true,
+        loop: false,
+        navigation: {
+          nextEl: ".cust-swiper-button-next",
+          prevEl: ".cust-swiper-button-prev",
+        },
+        breakpoints: {
+          1440: {
+            slidesPerView: 2.2,
+            spaceBetween: 25,
+            slidesOffsetBefore: 60,
+            slidesOffsetAfter: 60,
+          },
+          1640: {
+            slidesPerView: 3.2,
+            spaceBetween: 25,
+            slidesOffsetBefore: 60,
+            slidesOffsetAfter: 60,
+          },
+        },
+        on: {
+          reachEnd: function () {
+            this.snapGrid = [...this.slidesGrid];
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

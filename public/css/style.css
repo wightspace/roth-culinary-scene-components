@@ -12363,3 +12363,17 @@ body {
   font-weight: 600;
   padding: 10px 9px;
 }
+
+.btn-close-primary {
+  background-color: #f36b23;
+  opacity: 1;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.btn-pos-tr {
+  position: absolute;
+  top: -1rem;
+  right: -1.5rem;
+  z-index: 10;
+}
