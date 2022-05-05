@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Culinary-scenes - Header</title>
+  </head>
+  <body>
+    <header class="featured-culinary-scene featured-bg px-3 py-lg-2 py-lg-5">
+      <div class="container-lg featured-culinary-scene__header px-2 px-lg-5">
+        <h1 class="h4 text-light mb-5">Welcome back John Smith</h1>
+        <div class="d-flex justify-content-between">
+          <h2 class="h4 text-light mb-3">Featured</h2>
+          <div class="nav">
+            <button class="btn btn-link cust-swiper-button-prev">
+              <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse
+                  cx="22.6914"
+                  cy="22.166"
+                  rx="21"
+                  ry="21"
+                  transform="rotate(180 22.6914 22.166)"
+                  stroke="#F36B23"
+                  stroke-width="2"
+                />
+                <line x1="31.576" y1="21.9844" x2="14.3453" y2="21.9844" stroke="white" stroke-width="1.5" />
+                <path d="M19.1914 27.5508L13.8068 22.1662L19.1914 16.7815" stroke="white" stroke-width="1.5" />
+              </svg>
+            </button>
+            <button class="btn btn-link cust-swiper-button-next">
+              <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="22.0195" cy="22.166" rx="21" ry="21" stroke="#F36B23" stroke-width="2" />
+                <line x1="13.1349" y1="22.3477" x2="30.3657" y2="22.3477" stroke="white" stroke-width="1.5" />
+                <path d="M25.5195 16.7812L30.9041 22.1659L25.5195 27.5505" stroke="white" stroke-width="1.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="featured-culinary-scene__body">
+        <div class="row g-0">
+          <div class="col-12 swiper mySwiper">
+            <div class="swiper-wrapper">
+              <article class="culinary-scene swiper-slide">
+                <div class="culinary-scene__card-header">
+                  <div class="row g-0 mb-3">
+                    <div class="date-badge row g-0">
+                      <div class="col">
+                        <h6 class="date-badge__month">Sep</h6>
+                        <p class="date-badge__day h3">16</p>
+                      </div>
+                    </div>
+                    <img class="image img-fluid" src="https://source.unsplash.com/random/600x360/?kitchen" />
+                  </div>
+                </div>
+                <div class="culinary-scene__card-body mb-2">
+                  <div class="row">
+                    <div class="col col-7">
+                      <h1 class="h6 text-light clamp-2">
+                        Virtual Event: Introduction to the wolf convection steam oven
+                      </h1>
+                    </div>
+                    <div class="col col-5">
+                      <p class="p2 text-light text-end text-end">Thursday, September 16th 2022<br />5:00pm to 7:00pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="culinary-scene__card-footer d-flex justify-content-between">
+                  <a
+                    href="#"
+                    class="t3 d-flex btn btn-primary btn-sm text-uppercase rounded-pill mx-left align-items-center justify-content-between"
+                    >RESERVE YOUR SEAT
+
+                    <span class="ms-2">
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12.3515" cy="11.8662" r="10.7686" fill="white" stroke="#F36B23" stroke-width="2" />
+                        <path
+                          d="M8.91125 8.24609L15.7917 15.1266M15.7917 15.1266H8.91125M15.7917 15.1266C15.7917 15.1266 15.7917 10.9331 15.7917 8.24609"
+                          stroke="#3D3D3D"
+                          stroke-width="1.5"
+                        />
+                      </svg> </span
+                  ></a>
+                  <a href="#">
+                    <svg width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10.5569 9.49713C10.5569 8.38482 10.6359 8.10637 10.9964 7.9473C11.2995 7.81349 11.5369 7.86873 11.777 8.12886C11.9711 8.33927 11.9715 8.34153 11.9715 9.39945V10.4592H13.0312H14.091L14.321 10.6647C14.5134 10.8365 14.5497 10.9174 14.5434 11.1593C14.5281 11.7419 14.231 11.8737 12.9336 11.8737H11.9814L11.9587 12.9763L11.9361 14.0788L11.7376 14.2494C11.368 14.567 10.7882 14.4258 10.633 13.9803C10.5912 13.8604 10.5569 13.3374 10.5569 12.818V11.8737H9.60674C9.08414 11.8737 8.57795 11.8439 8.48191 11.8073C8.00825 11.6273 7.86482 11.1025 8.18111 10.7068L8.35071 10.4946L9.45383 10.4719L10.5569 10.4492V9.49713Z"
+                        fill="white"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M3.2092 0.458997C1.96852 0.792542 1.01344 1.90662 0.864204 3.19433C0.77615 3.95365 0.782727 26.3493 0.871064 26.6672C0.989885 27.095 1.46248 27.2921 1.86251 27.0809C1.95813 27.0304 3.38899 26.1874 5.04222 25.2075C10.5851 21.9224 11.3197 21.4938 11.4076 21.4938C11.4954 21.4938 12.2301 21.9224 17.7729 25.2075C19.4262 26.1874 20.857 27.0304 20.9527 27.0809C21.3527 27.2921 21.8253 27.095 21.9441 26.6672C22.0324 26.3493 22.039 3.95365 21.951 3.19433C21.7998 1.89028 20.8413 0.785186 19.5754 0.45546C18.965 0.296468 3.80146 0.299792 3.2092 0.458997ZM19.5129 1.89601C19.8709 2.05861 20.2484 2.42816 20.4296 2.7936C20.5632 3.06257 20.5671 3.35283 20.5856 14.1585L20.6045 25.2473L20.4088 25.1449C20.3011 25.0885 18.3034 23.9085 15.9694 22.5225C13.6355 21.1366 11.6543 19.9846 11.5667 19.9626C11.4792 19.9405 11.336 19.9405 11.2484 19.9626C11.1609 19.9846 9.1797 21.1366 6.84574 22.5225C4.51177 23.9085 2.51418 25.0885 2.4066 25.1447L2.21097 25.2471L2.22979 14.1938L2.24853 3.14037L2.44479 2.74077C2.64403 2.33501 2.94532 2.04793 3.3619 1.86687C3.55597 1.78257 4.82487 1.76658 11.4076 1.76552C18.8809 1.76439 19.2355 1.77005 19.5129 1.89601Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+              <article class="culinary-scene swiper-slide">
+                <div class="culinary-scene__card-header">
+                  <div class="row g-0 mb-3">
+                    <div class="date-badge row g-0">
+                      <div class="col">
+                        <h6 class="date-badge__month">Sep</h6>
+                        <p class="date-badge__day h3">16</p>
+                      </div>
+                    </div>
+                    <img class="image img-fluid" src="https://source.unsplash.com/random/600x360/?chef" />
+                  </div>
+                </div>
+                <div class="culinary-scene__card-body">
+                  <div class="row">
+                    <div class="col col-7">
+                      <h1 class="h6 text-light clamp-2">
+                        Virtual Event: Introduction to the wolf convection steam oven
+                      </h1>
+                    </div>
+                    <div class="col col-5">
+                      <p class="p2 text-light text-end">Thursday, September 16th 2022<br />5:00pm to 7:00pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="culinary-scene__card-footer d-flex justify-content-between">
+                  <a
+                    href="#"
+                    class="t3 d-flex btn btn-primary btn-sm text-uppercase rounded-pill mx-left align-items-center justify-content-between"
+                    >RESERVE YOUR SEAT
+
+                    <span class="ms-2">
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12.3515" cy="11.8662" r="10.7686" fill="white" stroke="#F36B23" stroke-width="2" />
+                        <path
+                          d="M8.91125 8.24609L15.7917 15.1266M15.7917 15.1266H8.91125M15.7917 15.1266C15.7917 15.1266 15.7917 10.9331 15.7917 8.24609"
+                          stroke="#3D3D3D"
+                          stroke-width="1.5"
+                        />
+                      </svg> </span
+                  ></a>
+                  <a href="#">
+                    <svg width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10.5569 9.49713C10.5569 8.38482 10.6359 8.10637 10.9964 7.9473C11.2995 7.81349 11.5369 7.86873 11.777 8.12886C11.9711 8.33927 11.9715 8.34153 11.9715 9.39945V10.4592H13.0312H14.091L14.321 10.6647C14.5134 10.8365 14.5497 10.9174 14.5434 11.1593C14.5281 11.7419 14.231 11.8737 12.9336 11.8737H11.9814L11.9587 12.9763L11.9361 14.0788L11.7376 14.2494C11.368 14.567 10.7882 14.4258 10.633 13.9803C10.5912 13.8604 10.5569 13.3374 10.5569 12.818V11.8737H9.60674C9.08414 11.8737 8.57795 11.8439 8.48191 11.8073C8.00825 11.6273 7.86482 11.1025 8.18111 10.7068L8.35071 10.4946L9.45383 10.4719L10.5569 10.4492V9.49713Z"
+                        fill="white"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M3.2092 0.458997C1.96852 0.792542 1.01344 1.90662 0.864204 3.19433C0.77615 3.95365 0.782727 26.3493 0.871064 26.6672C0.989885 27.095 1.46248 27.2921 1.86251 27.0809C1.95813 27.0304 3.38899 26.1874 5.04222 25.2075C10.5851 21.9224 11.3197 21.4938 11.4076 21.4938C11.4954 21.4938 12.2301 21.9224 17.7729 25.2075C19.4262 26.1874 20.857 27.0304 20.9527 27.0809C21.3527 27.2921 21.8253 27.095 21.9441 26.6672C22.0324 26.3493 22.039 3.95365 21.951 3.19433C21.7998 1.89028 20.8413 0.785186 19.5754 0.45546C18.965 0.296468 3.80146 0.299792 3.2092 0.458997ZM19.5129 1.89601C19.8709 2.05861 20.2484 2.42816 20.4296 2.7936C20.5632 3.06257 20.5671 3.35283 20.5856 14.1585L20.6045 25.2473L20.4088 25.1449C20.3011 25.0885 18.3034 23.9085 15.9694 22.5225C13.6355 21.1366 11.6543 19.9846 11.5667 19.9626C11.4792 19.9405 11.336 19.9405 11.2484 19.9626C11.1609 19.9846 9.1797 21.1366 6.84574 22.5225C4.51177 23.9085 2.51418 25.0885 2.4066 25.1447L2.21097 25.2471L2.22979 14.1938L2.24853 3.14037L2.44479 2.74077C2.64403 2.33501 2.94532 2.04793 3.3619 1.86687C3.55597 1.78257 4.82487 1.76658 11.4076 1.76552C18.8809 1.76439 19.2355 1.77005 19.5129 1.89601Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+              <article class="culinary-scene swiper-slide">
+                <div class="culinary-scene__card-header">
+                  <div class="row g-0">
+                    <img class="image img-fluid mb-3" src="https://source.unsplash.com/random/600x360/?people" />
+                  </div>
+                </div>
+                <div class="culinary-scene__card-body">
+                  <div class="row">
+                    <div class="col col-7">
+                      <h1 class="h6 text-light clamp-2">
+                        Virtual Event: Introduction to the wolf convection steam oven
+                      </h1>
+                    </div>
+                    <div class="col col-5">
+                      <p class="p2 text-light text-end">Thursday, September 16th 2022<br />5:00pm to 7:00pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="culinary-scene__card-footer d-flex justify-content-between">
+                  <a
+                    href="#"
+                    class="t3 d-flex btn btn-primary btn-sm text-uppercase rounded-pill mx-left align-items-center justify-content-between"
+                    >RESERVE YOUR SEAT
+
+                    <span class="ms-2">
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12.3515" cy="11.8662" r="10.7686" fill="white" stroke="#F36B23" stroke-width="2" />
+                        <path
+                          d="M8.91125 8.24609L15.7917 15.1266M15.7917 15.1266H8.91125M15.7917 15.1266C15.7917 15.1266 15.7917 10.9331 15.7917 8.24609"
+                          stroke="#3D3D3D"
+                          stroke-width="1.5"
+                        />
+                      </svg> </span
+                  ></a>
+                  <a href="#">
+                    <svg width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10.5569 9.49713C10.5569 8.38482 10.6359 8.10637 10.9964 7.9473C11.2995 7.81349 11.5369 7.86873 11.777 8.12886C11.9711 8.33927 11.9715 8.34153 11.9715 9.39945V10.4592H13.0312H14.091L14.321 10.6647C14.5134 10.8365 14.5497 10.9174 14.5434 11.1593C14.5281 11.7419 14.231 11.8737 12.9336 11.8737H11.9814L11.9587 12.9763L11.9361 14.0788L11.7376 14.2494C11.368 14.567 10.7882 14.4258 10.633 13.9803C10.5912 13.8604 10.5569 13.3374 10.5569 12.818V11.8737H9.60674C9.08414 11.8737 8.57795 11.8439 8.48191 11.8073C8.00825 11.6273 7.86482 11.1025 8.18111 10.7068L8.35071 10.4946L9.45383 10.4719L10.5569 10.4492V9.49713Z"
+                        fill="white"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M3.2092 0.458997C1.96852 0.792542 1.01344 1.90662 0.864204 3.19433C0.77615 3.95365 0.782727 26.3493 0.871064 26.6672C0.989885 27.095 1.46248 27.2921 1.86251 27.0809C1.95813 27.0304 3.38899 26.1874 5.04222 25.2075C10.5851 21.9224 11.3197 21.4938 11.4076 21.4938C11.4954 21.4938 12.2301 21.9224 17.7729 25.2075C19.4262 26.1874 20.857 27.0304 20.9527 27.0809C21.3527 27.2921 21.8253 27.095 21.9441 26.6672C22.0324 26.3493 22.039 3.95365 21.951 3.19433C21.7998 1.89028 20.8413 0.785186 19.5754 0.45546C18.965 0.296468 3.80146 0.299792 3.2092 0.458997ZM19.5129 1.89601C19.8709 2.05861 20.2484 2.42816 20.4296 2.7936C20.5632 3.06257 20.5671 3.35283 20.5856 14.1585L20.6045 25.2473L20.4088 25.1449C20.3011 25.0885 18.3034 23.9085 15.9694 22.5225C13.6355 21.1366 11.6543 19.9846 11.5667 19.9626C11.4792 19.9405 11.336 19.9405 11.2484 19.9626C11.1609 19.9846 9.1797 21.1366 6.84574 22.5225C4.51177 23.9085 2.51418 25.0885 2.4066 25.1447L2.21097 25.2471L2.22979 14.1938L2.24853 3.14037L2.44479 2.74077C2.64403 2.33501 2.94532 2.04793 3.3619 1.86687C3.55597 1.78257 4.82487 1.76658 11.4076 1.76552C18.8809 1.76439 19.2355 1.77005 19.5129 1.89601Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+              <article class="culinary-scene swiper-slide">
+                <div class="culinary-scene__card-header">
+                  <div class="row g-0">
+                    <img class="image img-fluid mb-3" src="https://source.unsplash.com/random/600x360/?kitchen" />
+                  </div>
+                </div>
+                <div class="culinary-scene__card-body">
+                  <div class="row">
+                    <div class="col col-7">
+                      <h1 class="h6 text-light clamp-2">
+                        Virtual Event: Introduction to the wolf convection steam oven
+                      </h1>
+                    </div>
+                    <div class="col col-5">
+                      <p class="p2 text-light text-end">Thursday, September 16th 2022<br />5:00pm to 7:00pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="culinary-scene__card-footer d-flex justify-content-between">
+                  <a
+                    href="#"
+                    class="t3 d-flex btn btn-primary btn-sm text-uppercase rounded-pill mx-left align-items-center justify-content-between"
+                    >RESERVE YOUR SEAT
+
+                    <span class="ms-2">
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12.3515" cy="11.8662" r="10.7686" fill="white" stroke="#F36B23" stroke-width="2" />
+                        <path
+                          d="M8.91125 8.24609L15.7917 15.1266M15.7917 15.1266H8.91125M15.7917 15.1266C15.7917 15.1266 15.7917 10.9331 15.7917 8.24609"
+                          stroke="#3D3D3D"
+                          stroke-width="1.5"
+                        />
+                      </svg> </span
+                  ></a>
+                  <a href="#">
+                    <svg width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10.5569 9.49713C10.5569 8.38482 10.6359 8.10637 10.9964 7.9473C11.2995 7.81349 11.5369 7.86873 11.777 8.12886C11.9711 8.33927 11.9715 8.34153 11.9715 9.39945V10.4592H13.0312H14.091L14.321 10.6647C14.5134 10.8365 14.5497 10.9174 14.5434 11.1593C14.5281 11.7419 14.231 11.8737 12.9336 11.8737H11.9814L11.9587 12.9763L11.9361 14.0788L11.7376 14.2494C11.368 14.567 10.7882 14.4258 10.633 13.9803C10.5912 13.8604 10.5569 13.3374 10.5569 12.818V11.8737H9.60674C9.08414 11.8737 8.57795 11.8439 8.48191 11.8073C8.00825 11.6273 7.86482 11.1025 8.18111 10.7068L8.35071 10.4946L9.45383 10.4719L10.5569 10.4492V9.49713Z"
+                        fill="white"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M3.2092 0.458997C1.96852 0.792542 1.01344 1.90662 0.864204 3.19433C0.77615 3.95365 0.782727 26.3493 0.871064 26.6672C0.989885 27.095 1.46248 27.2921 1.86251 27.0809C1.95813 27.0304 3.38899 26.1874 5.04222 25.2075C10.5851 21.9224 11.3197 21.4938 11.4076 21.4938C11.4954 21.4938 12.2301 21.9224 17.7729 25.2075C19.4262 26.1874 20.857 27.0304 20.9527 27.0809C21.3527 27.2921 21.8253 27.095 21.9441 26.6672C22.0324 26.3493 22.039 3.95365 21.951 3.19433C21.7998 1.89028 20.8413 0.785186 19.5754 0.45546C18.965 0.296468 3.80146 0.299792 3.2092 0.458997ZM19.5129 1.89601C19.8709 2.05861 20.2484 2.42816 20.4296 2.7936C20.5632 3.06257 20.5671 3.35283 20.5856 14.1585L20.6045 25.2473L20.4088 25.1449C20.3011 25.0885 18.3034 23.9085 15.9694 22.5225C13.6355 21.1366 11.6543 19.9846 11.5667 19.9626C11.4792 19.9405 11.336 19.9405 11.2484 19.9626C11.1609 19.9846 9.1797 21.1366 6.84574 22.5225C4.51177 23.9085 2.51418 25.0885 2.4066 25.1447L2.21097 25.2471L2.22979 14.1938L2.24853 3.14037L2.44479 2.74077C2.64403 2.33501 2.94532 2.04793 3.3619 1.86687C3.55597 1.78257 4.82487 1.76658 11.4076 1.76552C18.8809 1.76439 19.2355 1.77005 19.5129 1.89601Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+              <article class="culinary-scene swiper-slide">
+                <div class="culinary-scene__card-header">
+                  <div class="row g-0">
+                    <img class="image img-fluid mb-3" src="https://source.unsplash.com/random/600x360/?chef" />
+                  </div>
+                </div>
+                <div class="culinary-scene__card-body">
+                  <div class="row">
+                    <div class="col col-7">
+                      <h1 class="h6 text-light clamp-2">
+                        Virtual Event: Introduction to the wolf convection steam oven
+                      </h1>
+                    </div>
+                    <div class="col col-5">
+                      <p class="p2 text-light text-end">Thursday, September 16th 2022<br />5:00pm to 7:00pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="culinary-scene__card-footer d-flex justify-content-between">
+                  <a
+                    href="#"
+                    class="t3 d-flex btn btn-primary btn-sm text-uppercase rounded-pill mx-left align-items-center justify-content-between"
+                    >RESERVE YOUR SEAT
+
+                    <span class="ms-2">
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12.3515" cy="11.8662" r="10.7686" fill="white" stroke="#F36B23" stroke-width="2" />
+                        <path
+                          d="M8.91125 8.24609L15.7917 15.1266M15.7917 15.1266H8.91125M15.7917 15.1266C15.7917 15.1266 15.7917 10.9331 15.7917 8.24609"
+                          stroke="#3D3D3D"
+                          stroke-width="1.5"
+                        />
+                      </svg> </span
+                  ></a>
+                  <a href="#">
+                    <svg width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10.5569 9.49713C10.5569 8.38482 10.6359 8.10637 10.9964 7.9473C11.2995 7.81349 11.5369 7.86873 11.777 8.12886C11.9711 8.33927 11.9715 8.34153 11.9715 9.39945V10.4592H13.0312H14.091L14.321 10.6647C14.5134 10.8365 14.5497 10.9174 14.5434 11.1593C14.5281 11.7419 14.231 11.8737 12.9336 11.8737H11.9814L11.9587 12.9763L11.9361 14.0788L11.7376 14.2494C11.368 14.567 10.7882 14.4258 10.633 13.9803C10.5912 13.8604 10.5569 13.3374 10.5569 12.818V11.8737H9.60674C9.08414 11.8737 8.57795 11.8439 8.48191 11.8073C8.00825 11.6273 7.86482 11.1025 8.18111 10.7068L8.35071 10.4946L9.45383 10.4719L10.5569 10.4492V9.49713Z"
+                        fill="white"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M3.2092 0.458997C1.96852 0.792542 1.01344 1.90662 0.864204 3.19433C0.77615 3.95365 0.782727 26.3493 0.871064 26.6672C0.989885 27.095 1.46248 27.2921 1.86251 27.0809C1.95813 27.0304 3.38899 26.1874 5.04222 25.2075C10.5851 21.9224 11.3197 21.4938 11.4076 21.4938C11.4954 21.4938 12.2301 21.9224 17.7729 25.2075C19.4262 26.1874 20.857 27.0304 20.9527 27.0809C21.3527 27.2921 21.8253 27.095 21.9441 26.6672C22.0324 26.3493 22.039 3.95365 21.951 3.19433C21.7998 1.89028 20.8413 0.785186 19.5754 0.45546C18.965 0.296468 3.80146 0.299792 3.2092 0.458997ZM19.5129 1.89601C19.8709 2.05861 20.2484 2.42816 20.4296 2.7936C20.5632 3.06257 20.5671 3.35283 20.5856 14.1585L20.6045 25.2473L20.4088 25.1449C20.3011 25.0885 18.3034 23.9085 15.9694 22.5225C13.6355 21.1366 11.6543 19.9846 11.5667 19.9626C11.4792 19.9405 11.336 19.9405 11.2484 19.9626C11.1609 19.9846 9.1797 21.1366 6.84574 22.5225C4.51177 23.9085 2.51418 25.0885 2.4066 25.1447L2.21097 25.2471L2.22979 14.1938L2.24853 3.14037L2.44479 2.74077C2.64403 2.33501 2.94532 2.04793 3.3619 1.86687C3.55597 1.78257 4.82487 1.76658 11.4076 1.76552C18.8809 1.76439 19.2355 1.77005 19.5129 1.89601Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+    <script>
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+        spaceBetween: 0,
+        slideToClickedSlide: true,
+        loop: false,
+        navigation: {
+          nextEl: ".cust-swiper-button-next",
+          prevEl: ".cust-swiper-button-prev",
+        },
+        breakpoints: {
+          1440: {
+            slidesPerView: 2.2,
+            spaceBetween: 25,
+            slidesOffsetBefore: 60,
+            slidesOffsetAfter: 60,
+          },
+          1640: {
+            slidesPerView: 3.2,
+            spaceBetween: 25,
+            slidesOffsetBefore: 60,
+            slidesOffsetAfter: 60,
+          },
+        },
+        on: {
+          reachEnd: function () {
+            this.snapGrid = [...this.slidesGrid];
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
