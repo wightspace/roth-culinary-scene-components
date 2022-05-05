@@ -1,0 +1,46 @@
+@each $level, $size in $font-sizes {
+  h#{$level},
+  .h#{$level} {
+    font-family: $font-family-sans-serif;
+    font-weight: 100;
+  }
+}
+
+.condensed {
+  font-family: $font-family-sans-serif-header;
+}
+
+a {
+  text-decoration: none;
+}
+
+@each $level, $size in $title-font-sizes {
+  .t#{$level} {
+    font-size: $size;
+    font-weight: 600;
+  }
+}
+
+@each $level, $size in $paragraph-font-sizes {
+  .p#{$level} {
+    font-size: $size;
+  }
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.thin {
+  font-weight: 100;
+}
+.light {
+  font-weight: 300;
+}
+.regular {
+  font-weight: 400;
+}
+.bold {
+  font-weight: 700;
+}
