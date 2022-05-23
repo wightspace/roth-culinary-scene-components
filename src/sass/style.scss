@@ -129,8 +129,17 @@ body {
   color: white;
   position: relative;
 
+  &__body {
+    border: #3eabaa 2px solid;
+  }
+
   .wrap-position {
-    position: absolute;
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+    }
+
     bottom: 0;
     background-color: rgb(61 61 61 / 88%);
 
@@ -153,7 +162,11 @@ body {
     position: relative;
 
     .image-wrap {
-      height: 100%;
+      height: auto;
+
+      @include media-breakpoint-up(lg) {
+        height: 100%;
+      }
     }
 
     img.image {
@@ -413,4 +426,13 @@ body {
   top: -1rem;
   right: -1.5rem;
   z-index: 10;
+}
+
+.dropdown-full {
+  .dropdown-menu {
+    width: calc(100% - 2rem);
+    margin-top: -0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }

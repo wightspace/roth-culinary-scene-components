@@ -16,6 +16,12 @@
 
   .term-nav {
     margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
 
     a {
       font-size: 12px;
@@ -43,6 +49,10 @@
   .nav-item {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+    .nav-link {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     a {
       font-family: "Roboto";
@@ -72,7 +82,11 @@
   }
 }
 
-@include media-breakpoint-up(lg) {
+.user-dropdown-mobile {
+  .user-btn-toggle {
+    position: relative;
+  }
+
   .dropdown-menu.show {
     border: 2px solid #3eabaa;
   }
@@ -85,7 +99,6 @@
 
   .dropdown-toggle.show {
     &::before {
-      content: "";
       content: "";
       position: absolute;
       width: 0;
@@ -103,6 +116,38 @@
     }
   }
 }
+
+@include media-breakpoint-up(lg) {
+  .dropdown-menu.show {
+    border: 2px solid #3eabaa;
+  }
+
+  .dropdown-menu.dropdown-menu-center-lg.show {
+    right: auto !important;
+    left: 50% !important;
+    transform: translate(-50%, 0) !important;
+  }
+
+  .dropdown-toggle.show {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 0;
+      right: 0;
+      bottom: -32px;
+      box-sizing: border-box;
+      border: 0.5em solid black;
+      border-color: transparent transparent #2d2d2d #2d2d2d;
+      transform: rotate(135deg);
+      box-shadow: -2px 2px 0px 0 #3eabaa;
+      z-index: 1001;
+      margin: auto;
+    }
+  }
+}
+
 .user-navbar {
   @include media-breakpoint-down(lg) {
     display: none;
@@ -146,7 +191,7 @@
       content: "";
       display: inline-block;
       position: absolute;
-      width: auto;
+      width: 100%;
       height: 2px;
       background-color: #fff;
       bottom: 0;
