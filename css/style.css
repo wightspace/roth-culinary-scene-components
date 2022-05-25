@@ -2646,7 +2646,7 @@ progress {
   }
 }
 .form-label {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .col-form-label {
@@ -2683,11 +2683,11 @@ progress {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
+  background-color: #dedede;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #58595b;
   appearance: none;
-  border-radius: 0.25rem;
+  border-radius: 10px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2784,7 +2784,7 @@ progress {
   min-height: calc(1.5em + 0.5rem + 2px);
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
-  border-radius: 0.2rem;
+  border-radius: 10px;
 }
 .form-control-sm::file-selector-button {
   padding: 0.25rem 0.5rem;
@@ -2801,7 +2801,7 @@ progress {
   min-height: calc(1.5em + 1rem + 2px);
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
-  border-radius: 0.3rem;
+  border-radius: 10px;
 }
 .form-control-lg::file-selector-button {
   padding: 0.5rem 1rem;
@@ -2834,11 +2834,11 @@ textarea.form-control-lg {
 }
 .form-control-color::-moz-color-swatch {
   height: 1.5em;
-  border-radius: 0.25rem;
+  border-radius: 10px;
 }
 .form-control-color::-webkit-color-swatch {
   height: 1.5em;
-  border-radius: 0.25rem;
+  border-radius: 10px;
 }
 
 .form-select {
@@ -2850,7 +2850,7 @@ textarea.form-control-lg {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
+  background-color: #dedede;
   background-image: url("data:image/svg+xml,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.2543 0.832031L7.2543 13.6867M7.2543 13.6867L0.826963 7.25936M7.2543 13.6867C7.2543 13.6867 11.1716 9.76939 13.6816 7.25936' stroke='%23CB4E0B' stroke-width='1.5'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
@@ -2887,7 +2887,7 @@ textarea.form-control-lg {
   padding-bottom: 0.25rem;
   padding-left: 1rem;
   font-size: 0.875rem;
-  border-radius: 0.2rem;
+  border-radius: 10px;
 }
 
 .form-select-lg {
@@ -2895,7 +2895,7 @@ textarea.form-control-lg {
   padding-bottom: 0.5rem;
   padding-left: 1rem;
   font-size: 1.25rem;
-  border-radius: 0.3rem;
+  border-radius: 10px;
 }
 
 .form-check {
@@ -3172,8 +3172,8 @@ textarea.form-control-lg {
   text-align: center;
   white-space: nowrap;
   background-color: #e9ecef;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  border: 1px solid #58595b;
+  border-radius: 10px;
 }
 
 .input-group-lg > .form-control,
@@ -3182,7 +3182,7 @@ textarea.form-control-lg {
 .input-group-lg > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
-  border-radius: 0.3rem;
+  border-radius: 10px;
 }
 
 .input-group-sm > .form-control,
@@ -3191,7 +3191,7 @@ textarea.form-control-lg {
 .input-group-sm > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
-  border-radius: 0.2rem;
+  border-radius: 10px;
 }
 
 .input-group-lg > .form-select,
@@ -11996,6 +11996,10 @@ footer p,
 footer .util,
 .footer .util {
   background-color: #2d2d2d;
+}
+
+form label {
+  margin-bottom: 0.5rem;
 }
 
 body {
